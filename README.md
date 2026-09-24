@@ -2,7 +2,7 @@
 
 A drop-down developer console for Unity, for the editor and development builds only.
 
-- **Backquote** (the key under Esc) opens and closes it. The key is fixed, so it works on any keyboard layout.
+- **Backquote** opens and closes it. The key is fixed, so it works on any keyboard layout.
 - **Self-registering commands.** Declare a `static readonly` field and the command exists. There is no scene object to add and no list to maintain.
 - **One typed argument per command**, parsed strictly: `string`, `int`, `float`, `bool` (`true`/`false` only), `Vector3` (`"1 2 3"`) and any enum.
 - **Suggestions as you type.** Each typed word matches the start of a command segment, in order: `se pl he` finds `set_player_health`, and `se pla` finds every `set_player_*`. Up/Down move the highlight, and Tab or Enter accepts it.
