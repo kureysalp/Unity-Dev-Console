@@ -1,6 +1,6 @@
 {
-  "name": "com.alp.dev-console",
-  "version": "0.1.0",
+  "name": "com.alpthedev.dev-console",
+  "version": "0.1.1",
   "displayName": "Dev Console",
   "description": "A drop-down developer console for editor and development builds. Commands register themselves from a static field, take one typed argument, and are found by segment-prefix suggestions navigable with the arrow keys. Compiled out of release builds.",
   "unity": "6000.0",

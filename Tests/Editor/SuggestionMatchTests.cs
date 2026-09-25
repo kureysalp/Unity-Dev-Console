@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Alp.DevConsole.Tests
+namespace AlpTheDev.DevConsole.Tests
 {
     public class SuggestionMatchTests
     {

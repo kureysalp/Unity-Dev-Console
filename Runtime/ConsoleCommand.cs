@@ -1,6 +1,6 @@
 using System;
 
-namespace Alp.DevConsole
+namespace AlpTheDev.DevConsole
 {
     public class ConsoleCommand : ConsoleCommandBase
     {

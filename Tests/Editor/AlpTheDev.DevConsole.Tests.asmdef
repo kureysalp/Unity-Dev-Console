@@ -1,8 +1,8 @@
 {
-    "name": "Alp.DevConsole.Tests",
-    "rootNamespace": "Alp.DevConsole.Tests",
+    "name": "AlpTheDev.DevConsole.Tests",
+    "rootNamespace": "AlpTheDev.DevConsole.Tests",
     "references": [
-        "Alp.DevConsole",
+        "AlpTheDev.DevConsole",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],

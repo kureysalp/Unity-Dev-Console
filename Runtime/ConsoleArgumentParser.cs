@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using UnityEngine;
 
-namespace Alp.DevConsole
+namespace AlpTheDev.DevConsole
 {
     public static class ConsoleArgumentParser
     {

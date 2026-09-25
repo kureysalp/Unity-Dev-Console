@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Alp.DevConsole
+namespace AlpTheDev.DevConsole
 {
     public class DevConsoleUI : MonoBehaviour
     {

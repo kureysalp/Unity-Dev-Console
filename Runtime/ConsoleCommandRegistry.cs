@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Alp.DevConsole
+namespace AlpTheDev.DevConsole
 {
     public static class ConsoleCommandRegistry
     {

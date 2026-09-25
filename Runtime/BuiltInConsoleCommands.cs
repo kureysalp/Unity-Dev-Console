@@ -1,13 +1,12 @@
 using System.Text;
 using UnityEngine;
 
-namespace Alp.DevConsole
+namespace AlpTheDev.DevConsole
 {
     [ConsoleCommandSet]
     public static class BuiltInConsoleCommands
     {
         private const int FormatColumnWidth = 30;
-        private const float MaxTimeScale = 10f;
 
         public static readonly ConsoleCommand HELP = new(
             "help",
@@ -57,9 +56,9 @@ namespace Alp.DevConsole
 
         private static void SetTimeScale(float scale)
         {
-            if (scale < 0f || scale > MaxTimeScale)
+            if (scale < 0f)
             {
-                DevConsole.LogError($"time scale must be between 0 and {MaxTimeScale:0}");
+                DevConsole.LogError($"time scale must be positive.");
                 return;
             }
 

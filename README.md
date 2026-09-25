@@ -2,11 +2,11 @@
 
 A drop-down developer console for Unity, for the editor and development builds only.
 
-- **Backquote** opens and closes it. The key is fixed, so it works on any keyboard layout.
+- **Backquote** Toggles the console. The key is fixed, so it works on any keyboard layout.
 - **Self-registering commands.** Declare a `static readonly` field and the command exists. There is no scene object to add and no list to maintain.
 - **One typed argument per command**, parsed strictly: `string`, `int`, `float`, `bool` (`true`/`false` only), `Vector3` (`"1 2 3"`) and any enum.
 - **Suggestions as you type.** Each typed word matches the start of a command segment, in order: `se pl he` finds `set_player_health`, and `se pla` finds every `set_player_*`. Up/Down move the highlight, and Tab or Enter accepts it.
-- **Compiled out of release builds.** The `Alp.DevConsole` assembly only exists under `UNITY_EDITOR || DEVELOPMENT_BUILD`.
+- **Compiled out of release builds.** The `AlpTheDev.DevConsole` assembly only exists under `UNITY_EDITOR || DEVELOPMENT_BUILD`.
 
 ## Requirements
 
@@ -21,12 +21,6 @@ A drop-down developer console for Unity, for the editor and development builds o
 https://github.com/kureysalp/Unity-Dev-Console.git
 ```
 
-Append `#v0.1.0` to pin a version. Or add it to `Packages/manifest.json` directly:
-
-```json
-"com.alp.dev-console": "https://github.com/kureysalp/Unity-Dev-Console.git#v0.1.0"
-```
-
 Press Play and hit backquote. The console bootstraps itself after the first scene loads.
 
 ## Built-in commands
@@ -36,15 +30,15 @@ Press Play and hit backquote. The console bootstraps itself after the first scen
 | `help` | Lists every command |
 | `clear` | Clears the console log |
 | `quit` | Leaves play mode, or exits a build |
-| `set_time_scale <float>` | Sets `Time.timeScale`, from 0 to 10 |
+| `set_time_scale <float>` | Sets `Time.timeScale` |
 
 ## Adding commands
 
-Put your commands in a static class marked `[ConsoleCommandSet]`, one `public static readonly` field per command. At startup the console finds every such class, in any assembly that references `Alp.DevConsole`, and runs its static constructor, so the fields register themselves.
+Put your commands in a static class marked `[ConsoleCommandSet]`, one `public static readonly` field per command. At startup the console finds every such class, in any assembly that references `AlpTheDev.DevConsole`, and runs its static constructor, so the fields register themselves.
 
 ```csharp
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
-using Alp.DevConsole;
+using AlpTheDev.DevConsole;
 using UnityEngine;
 
 [ConsoleCommandSet]
@@ -67,7 +61,6 @@ public static class GameConsoleCommands
 
 - `ConsoleCommand` takes no argument and rejects one. `ConsoleCommand<T>` requires one and converts it with `ConsoleArgumentParser`.
 - Report from the handler with `DevConsole.Log` and `DevConsole.LogError`. Both accept rich-text colour tags.
-- Ids are `snake_case`. Suggestions split them on `_`, so name them as segments you would type: `set_player_health`, not `setplayerhealth`.
 - A duplicate id logs an error and keeps the first one registered.
 - Wrap your command files in `#if UNITY_EDITOR || DEVELOPMENT_BUILD`, because the package assembly does not exist in a release build.
 
@@ -77,7 +70,7 @@ public static class GameConsoleCommands
 
 ```csharp
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
-if (Alp.DevConsole.DevConsoleUI.IsOpen) return;
+if (AlpTheDev.DevConsole.DevConsoleUI.IsOpen) return;
 #endif
 ```
 

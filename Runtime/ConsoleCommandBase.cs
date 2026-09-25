@@ -1,4 +1,4 @@
-namespace Alp.DevConsole
+namespace AlpTheDev.DevConsole
 {
     public abstract class ConsoleCommandBase
     {

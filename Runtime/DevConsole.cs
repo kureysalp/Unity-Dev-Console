@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using UnityEngine;
 
-namespace Alp.DevConsole
+namespace AlpTheDev.DevConsole
 {
     public static class DevConsole
     {

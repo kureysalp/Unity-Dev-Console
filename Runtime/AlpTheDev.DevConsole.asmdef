@@ -1,6 +1,6 @@
 {
-    "name": "Alp.DevConsole",
-    "rootNamespace": "Alp.DevConsole",
+    "name": "AlpTheDev.DevConsole",
+    "rootNamespace": "AlpTheDev.DevConsole",
     "references": [
         "Unity.InputSystem"
     ],

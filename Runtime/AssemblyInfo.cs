@@ -1,3 +1,3 @@
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("Alp.DevConsole.Tests")]
+[assembly: InternalsVisibleTo("AlpTheDev.DevConsole.Tests")]
