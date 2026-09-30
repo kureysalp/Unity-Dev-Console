@@ -1,5 +1,7 @@
 # Dev Console
 
+[![openupm](https://img.shields.io/npm/v/com.alpthedev.dev-console?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.alpthedev.dev-console/)
+
 A drop-down developer console for Unity, for the editor and development builds only.
 
 ![Dev Console showcase](Documentation~/showcase.gif)
@@ -17,11 +19,29 @@ A drop-down developer console for Unity, for the editor and development builds o
 
 ## Install
 
+### Git URL
+
 **Window > Package Manager > + > Add package from git URL**:
 
 ```
 https://github.com/kureysalp/Unity-Dev-Console.git
 ```
+
+### OpenUPM
+
+With the [openupm-cli](https://openupm.com/docs/getting-started-cli.html):
+
+```
+openupm add com.alpthedev.dev-console
+```
+
+Or add the scoped registry by hand in **Edit > Project Settings > Package Manager**:
+
+- **Name:** `package.openupm.com`
+- **URL:** `https://package.openupm.com`
+- **Scope(s):** `com.alpthedev`
+
+Then install **Dev Console** from **Window > Package Manager > My Registries**.
 
 Press Play and hit the key under Esc. The console bootstraps itself after the first scene loads.
 
