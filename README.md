@@ -2,7 +2,7 @@
 
 A drop-down developer console for Unity, for the editor and development builds only.
 
-- **Backquote** Toggles the console. The key is fixed, so it works on any keyboard layout.
+- **The key under Esc** toggles the console, Counter-Strike style. It is bound by physical position, so it is the same key on every layout: `` ` `` on US, `"` on Turkish Q, `^` on German. Whatever character it types never reaches the input line.
 - **Self-registering commands.** Declare a `static readonly` field and the command exists. There is no scene object to add and no list to maintain.
 - **One typed argument per command**, parsed strictly: `string`, `int`, `float`, `bool` (`true`/`false` only), `Vector3` (`"1 2 3"`) and any enum.
 - **Suggestions as you type.** Each typed word matches the start of a command segment, in order: `se pl he` finds `set_player_health`, and `se pla` finds every `set_player_*`. Up/Down move the highlight, and Tab or Enter accepts it.
@@ -21,7 +21,7 @@ A drop-down developer console for Unity, for the editor and development builds o
 https://github.com/kureysalp/Unity-Dev-Console.git
 ```
 
-Press Play and hit backquote. The console bootstraps itself after the first scene loads.
+Press Play and hit the key under Esc. The console bootstraps itself after the first scene loads.
 
 ## Built-in commands
 

@@ -15,6 +15,8 @@ namespace AlpTheDev.DevConsole
         private const int SuggestionFormatFontSize = 12;
         private const float SuggestionIdWidthFraction = 0.3f;
 
+        private const Key ToggleKey = Key.Backquote;
+
         private static readonly Color TextColor = new(0.87f, 0.91f, 0.96f);
         private static readonly Color PromptColor = new(0.56f, 0.72f, 1f);
         private static readonly Color PanelColor = new(0.02f, 0.03f, 0.05f, 0.92f);
@@ -62,7 +64,7 @@ namespace AlpTheDev.DevConsole
         {
             Keyboard keyboard = Keyboard.current;
 
-            if (keyboard != null && keyboard.backquoteKey.wasPressedThisFrame) SetOpen(!IsOpen);
+            if (keyboard != null && keyboard[ToggleKey].wasPressedThisFrame) SetOpen(!IsOpen);
 
             float step = SlideSeconds > 0f ? Time.unscaledDeltaTime / SlideSeconds : 1f;
             _slide = Mathf.MoveTowards(_slide, IsOpen ? 1f : 0f, step);
@@ -99,7 +101,7 @@ namespace AlpTheDev.DevConsole
             GUILayout.BeginHorizontal();
             GUILayout.Label(Prompt, _promptStyle, GUILayout.ExpandWidth(false));
             GUI.SetNextControlName(InputControlName);
-            var typed = GUILayout.TextField(_line, _lineStyle, GUILayout.ExpandWidth(true)).Replace("`", string.Empty);
+            var typed = GUILayout.TextField(_line, _lineStyle, GUILayout.ExpandWidth(true));
             GUILayout.EndHorizontal();
 
             GUILayout.EndArea();
@@ -280,6 +282,12 @@ namespace AlpTheDev.DevConsole
             Event current = Event.current;
 
             if (current.type != EventType.KeyDown) return;
+
+            if (current.character != '\0' && Keyboard.current != null && Keyboard.current[ToggleKey].isPressed)
+            {
+                current.Use();
+                return;
+            }
 
             switch (current.keyCode)
             {
