@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2] - 2026-09-30
+
+- The console toggles with the key under Esc on every keyboard layout, and the character that key types no longer reaches the input line.
+
+## [0.1.1] - 2026-09-26
+
+- Renamed the package to `com.alpthedev.dev-console` and the namespace and assemblies to `AlpTheDev.DevConsole`.
+
 ## [0.1.0] - 2026-09-24
 
 - First release.
