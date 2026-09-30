@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.3] - 2026-09-30
+
+- Minimum Unity version lowered from 6000.0 to 2021.3 LTS, and the Input System dependency from 1.11.0 to 1.7.0.
+
 ## [0.1.2] - 2026-09-30
 
 - The console toggles with the key under Esc on every keyboard layout, and the character that key types no longer reaches the input line.

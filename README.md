@@ -10,7 +10,7 @@ A drop-down developer console for Unity, for the editor and development builds o
 
 ## Requirements
 
-- Unity 6000.0 or newer
+- Unity 2021.3 LTS or newer (2022.3 LTS and Unity 6 included)
 - Input System, set as the active input handler (pulled in by the package)
 
 ## Install

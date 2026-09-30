@@ -1,9 +1,9 @@
 {
   "name": "com.alpthedev.dev-console",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "displayName": "Dev Console",
   "description": "A drop-down developer console for editor and development builds. Commands register themselves from a static field, take one typed argument, and are found by segment-prefix suggestions navigable with the arrow keys. Compiled out of release builds.",
-  "unity": "6000.0",
+  "unity": "2021.3",
   "author": {
     "name": "Alp",
     "email": "kureysalp@gmail.com"
@@ -15,7 +15,7 @@
     "developer"
   ],
   "dependencies": {
-    "com.unity.inputsystem": "1.11.0",
+    "com.unity.inputsystem": "1.7.0",
     "com.unity.modules.imgui": "1.0.0"
   }
 }
